@@ -1,0 +1,85 @@
+<!DOCTYPE html xmlns="http://www.w3.org/2000/svg">
+<html>
+<head>
+<meta charset="utf-8">
+<link href="style2.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+<script src="script2.js" type="text/javascript"></script>
+
+<script>
+ $(function() {
+    $( "#StartDate" ).datepicker();
+  });
+
+
+</script>
+
+</head>
+<body >
+ 	<div id="Box1"> Visualize Retirement  
+ 		<div id="BoxHead">
+				 <?xml version="1.0"?>
+				<svg width="400" height="60" version="1.1"  xmlns="http://www.w3.org/2000/svg">
+					<circle id="c1" cx="50" cy="30" r="15" stroke="black" stroke-width="2" fill="#fa7f4a" onclick="Call_VR2()"/>
+					<text x="47" y="34" fill="black" style="font-size:15px" >1</text>
+					<line x1="65" y1="30" x2="140" y2="30" style="stroke:rgb(0,0,0);stroke-width:2" />
+
+					<circle id="c2" cx="150" cy="30" r="15" stroke="black" stroke-width="2" fill="#ffffff" />
+					<text x="147" y="34" fill="black" style="font-size:15px" >2</text>
+					<line x1="165" y1="30" x2="240" y2="30" style="stroke:rgb(0,0,0);stroke-width:2" />
+
+					<circle id="c3" cx="250" cy="30" r="15" stroke="black" stroke-width="2" fill="#ffffff"/>
+				  	<text x="247" y="34" fill="black" style="font-size:15px">3</text>
+				  	<line x1="265" y1="30" x2="340" y2="30" style="stroke:rgb(0,0,0);stroke-width:2" />
+
+				  	<circle id="c4"  cx="350" cy="30" r="15" stroke="black" stroke-width="2" fill="#ffffff"/>
+				  	<text x="347" y="34" fill="black" style="font-size:15px">4</text>
+
+				<!--   <rect x="0" y="0" width="400" height="60"
+				  style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.5" /> -->
+				</svg>
+ 		</div>
+ 		<div id="tabs">
+ 				<div id="tab1">Personal</div>
+ 				<div id="tab2">Retirement</div>
+ 		</div>
+
+ 		<div id="TabsContainer">
+ 				<div id="SidePane" >
+ 					<img  id="Icon1" src="Icon1.jpg" alt="Icon1.jpg" class="myIcon" draggable="true" ondragstart="drag(event)">
+ 					<img id="Icon2" src="Icon2.jpg" alt="Icon1.jpg" class="myIcon" draggable="true" ondragstart="drag(event)">
+ 					<img id="Icon3" src="Icon3.jpg" alt="Icon1.jpg" class="myIcon" draggable="true" ondragstart="drag(event)">
+ 				</div>	
+ 				<div id="ContentPane" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+ 		</div>
+ 		<div id="NEXTbutton" onclick="Call_VR3()">
+ 				<div> NEXT</div>
+ 		</div>
+		<div id="VR3_Container" >
+			<div id="SidePane2"> </div>
+			<div id="ContentPane2">
+				<input type="button" value=" ADD GOAL " id="AddGoalBtn1" onclick="AddGoal()" />
+				<input type="button" value=" VIEW GOALS " id="ViewGoalBtn1" onclick="Call_VR4()" />
+				<div id="AddGoalBox">
+					<pre ><p id="text1">    Action 	  	  	     Start Date :		    End Date: </p></pre> 
+					<input id="StartDate" />
+				</div>
+			
+			</div>
+			<div id="PendingGoals">
+				<p id="YourGoals"> Your Goals 	</p>
+
+				<div class="GoalDetails text2"> <pre ><p class="text2" >   Goal 			    		Start Date:		End Date:		Status </p></pre></div>
+			</div>
+			<div id="NEXTbutton2">
+ 				<div> NEXT</div>
+ 			</div>
+
+		</div>
+	
+</body>
+</html>
